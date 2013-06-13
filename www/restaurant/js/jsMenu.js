@@ -408,6 +408,7 @@ $(document).on('swipeleft','#bmardi', function() {
 		$("#mardi").slideDown("slow");
   });
 $(document).on('swipeleft','#bmercredi', function() {
+	
 	counter=0;
 		while(jour!=3){
 			if(jour>3){
@@ -418,10 +419,10 @@ $(document).on('swipeleft','#bmercredi', function() {
 				counter=counter-1;
 				jour=jour+1;
 			}
-		}
 		numero=numero-counter;		
 		setdate();
 		menu(m);
+	}
 		$("#mardi").slideUp("slow");
 		$("#lundi").slideUp("slow");
 		$("#jeudi").slideUp("slow");

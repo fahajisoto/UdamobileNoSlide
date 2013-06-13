@@ -36,11 +36,11 @@ function makelist(json){
 						+ " "
 						+ listelement[i].prenom
 						+ "</h3>" 
-						+ "<img src=\"../css/phone.png\"><p>Courriel: " 
+						+ "<img src=\"css/phone.png\">Courriel:"+"<p>" 
 						+ "<a class=\"udamob_contact_a\" href='mailto:" + listelement[i].mail + "'>" + listelement[i].mail + "</a>"
 						+"</p>";
 				if(listelement[i].tel) {
-					html+= "<img src=\"../css/mail_green.png\"><p>TEL: " 
+					html+= "<img src=\"css/mail_green.png\">TEL:"+"<p>" 
 							+ "<a class=\"udamob_contact_a\" href='tel:" + listelement[i].tel	+"'>" + listelement[i].tel + "</a>" 
 							+ "</p>";
 				}

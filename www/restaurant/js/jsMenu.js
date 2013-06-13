@@ -196,7 +196,8 @@ function makemenu(json){
 			if(day == serveur)
 			{
 				if(MidiSize>0)
-					html += "<li id=\"EntréesM\"><img src=\"css/entree.png\" class=\"icons\"></img><h4>Entrées:</h4>"+EntréesMidi+"</li>" +
+					html +="<li><img src=\"css/jour.jpg\" class=\"icons\"></img><h3>menu de midi:</h3></li>"+
+							"<li id=\"EntréesM\"><img src=\"css/entree.png\" class=\"icons\"></img><h4>Entrées:</h4>"+EntréesMidi+"</li>" +
 							"<li id=\"PlatsM\"><img src=\"css/repas.png\" class=\"icons\"></img><h4>Plats:</h4>"+PlatsMidi+"</li>" +
 							"<li id=\"LégumesM\"><img src=\"css/legume.png\" class=\"icons\"></img><h4>Légumes:</h4>"+ LégumesMidi+"</li>" +
 							"<li id=\"DessertsM\"><img src=\"css/dess.png\" class=\"icons\"></img><h4>Desserts:</h4>"+DessertsMidi+"</li>";
@@ -204,10 +205,11 @@ function makemenu(json){
 					html += "<li><p><span style='text-decoration:underline' >Midi</span> : Pas de service</p></li>";
 				if(SoirSize>0)
 					html+="<li><img src=\"css/soir.png\" class=\"icons\"></img><h3>menu du soir:</h3></li>"+
-							"<li  id=\"EntréesSoir\"><p><h4>Entrées:</h4>"+EntréesSoir+" </p></li>" +
-							"<li id=\"Plats\"><p><h4>Plats:</h4>"+PlatsSoir+"</p></li>" +
-							"<li id=\"Légumes\"><p><h4>Légumes:</h4>" +LégumesSoir+"</p></li>" +
-							"<li id=\"Desserts\"><p><h4>Desserts:</h4>"+DessertsSoir+"</p></li>";
+							"<li id=\"EntréesSoir\"><img src=\"css/entree.png\" class=\"icons\"></img><h4>Entrées:</h4>"+EntréesSoir+"</li>" +
+							"<li id=\"Plats\"><img src=\"css/repas.png\" class=\"icons\"></img><h4>Plats:</h4>"+PlatsSoir+"</li>" +
+							"<li id=\"Légumes\"><img src=\"css/legume.png\" class=\"icons\"></img><h4>Légumes:</h4>"+ LégumesSoir+"</li>" +
+							"<li id=\"Desserts\"><img src=\"css/dess.png\" class=\"icons\"></img><h4>Desserts:</h4>"+DessertsSoir+"</li>";
+		
 				else 
 					html += "<li><p class=\"soir\"><span style='text-decoration:underline' ><h4>Soir</span> : Pas de service</h4></p></li>";
 			}

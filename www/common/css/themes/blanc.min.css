@@ -82,10 +82,11 @@
 
 .ui-btn-up-a {
 	border: 1px solid #cccccc;
-	background: #eeeeee;
+	background: #555;
 	font-weight: bold;
 	color: #2f3e46;
 	text-shadow: 0 1px 0 #000000;
+	/*
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa),
 		to(#000000));
 	background-image: -webkit-linear-gradient(#000000, #fafafa);
@@ -93,6 +94,7 @@
 	background-image: -ms-linear-gradient(#000000, #fafafa);
 	background-image: -o-linear-gradient(#000000, #fafafa);
 	background-image: linear-gradient(#000000, #fafafa);
+	*/
 }
 
 .ui-btn-up-a:visited,.ui-btn-up-a a.ui-link-inherit {

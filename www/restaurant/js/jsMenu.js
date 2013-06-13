@@ -20,6 +20,12 @@ var numero=today.getDate();
 var jour;
 var month;
 var counter=0;
+var lundi=0;
+var mardi=0;
+var mercredi=0;
+var jeudi=0;
+var vendredi=0;
+var date;
 
 function init_itineraire(lat,lan){
 	end = new google.maps.LatLng(lat,lan);
@@ -151,7 +157,9 @@ function setdate(){
 	TabJour = new Array("Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi");
 	TabMois = new Array("janvier","février","mars","avril","mai","juin","juillet","aout","septembre","octobre","novembre","décembre");
 	messageDate = TabJour[jour] + " " + numero + " " + TabMois[month];
-	$('#pdate').html(messageDate);
+	date="#"+jour+"date";
+	$(date).html(messageDate);
+	$(date).show();
 	month=month+1;
 	if (month>9)
 		day = today.getFullYear()+"-"+month+"-"+numero;
@@ -222,18 +230,28 @@ function makemenu(json){
 		alert("le menu n'a pas été envoyer!!!");
 	}
 	
-	if(jour==1)
+	if(jour==1){
 		$('#lundi').html(html);	
-	if(jour==2)
-		$('#mardi').html(html);	
+		lundi=1;
+	}
+	if(jour==2){
+		$('#mardi').html(html);
+		mardi=1;
+	}
 	if(jour==3)
+		{
 		$('#mercredi').html(html);	
-	if(jour==4)
+		mercredi=1;
+		}
+	if(jour==4){
 		$('#jeudi').html(html);	
-	if(jour==5)
+		jeudi=1;}
+	if(jour==5){
 		$('#vendredi').html(html);	
+		vendredi=1;}
 	if(jour==6 || jour==0)
-		alert
+		alert("pas de menu de weekend");
+	
 
 }
 
@@ -244,6 +262,21 @@ $(document).on('click','#btnBack', function(){
 	numero = today.getDate();
 	html="";
 	$('#addressText').html(html);
+	$('#lundi').html("");
+	$('#mardi').html("");
+	$('#mercredi').html("");
+	$('#jeudi').html("");
+	$('#vendredi').html("");
+	lundi=0;
+	mardi=0;
+	mercredi=0;
+	jeudi=0;
+	vendredi=0;
+	$('#2date').hide();
+	$('#3date').hide();
+	$('#4date').hide();
+	$('#5date').hide();
+	$('#1date').hide();
 	
 });
 
@@ -257,6 +290,7 @@ $(document).ready(function() {
 });
 
 $(document).on('click','#blundi', function() {
+	if(lundi==0){
 	counter=0;
 		while(jour!=1){
 			if(jour>1){
@@ -271,15 +305,22 @@ $(document).on('click','#blundi', function() {
 		numero=numero-counter;		
 		setdate();
 		menu(m);
+	}
 	$("#mardi").slideUp("slow");
 	$("#mercredi").slideUp("slow");
 	$("#jeudi").slideUp("slow");
 	$("#vendredi").slideUp("slow");
+	$('#2date').hide();
+	$('#3date').hide();
+	$('#4date').hide();
+	$('#5date').hide();
+	$('#1date').show();
 	$("#lundi").slideDown("slow");
 	
   });
 
 $(document).on('click','#bmardi', function() {
+	if(mardi==0){
 	counter=0;
 		while(jour!=2){
 			if(jour>2){
@@ -294,13 +335,20 @@ $(document).on('click','#bmardi', function() {
 		numero=numero-counter;		
 		setdate();
 		menu(m);
+	}
 		$("#lundi").slideUp("slow");
 		$("#mercredi").slideUp("slow");
 		$("#jeudi").slideUp("slow");
 		$("#vendredi").slideUp("slow");
+		$('#1date').hide();
+		$('#3date').hide();
+		$('#4date').hide();
+		$('#5date').hide();
+		$('#2date').show();
 		$("#mardi").slideDown("slow");
   });
 $(document).on('click','#bmercredi', function() {
+	if(mercredi==0){
 	counter=0;
 		while(jour!=3){
 			if(jour>3){
@@ -312,115 +360,6 @@ $(document).on('click','#bmercredi', function() {
 				jour=jour+1;
 			}
 		}
-		numero=numero-counter;		
-		setdate();
-		menu(m);
-		$("#mardi").slideUp("slow");
-		$("#lundi").slideUp("slow");
-		$("#jeudi").slideUp("slow");
-		$("#vendredi").slideUp("slow");
-		$("#mercredi").slideDown("slow");
-  });
-$(document).on('click','#bjeudi', function() {
-	counter=0;
-		while(jour!=4){
-			if(jour>4){
-				counter=counter+1;
-				jour=jour-1;
-			}
-			else{
-				counter=counter-1;
-				jour=jour+1;
-			}
-		}
-		numero=numero-counter;		
-		setdate();
-		menu(m);
-		$("#mardi").slideUp("slow");
-		$("#lundi").slideUp("slow");
-		$("#mercredi").slideUp("slow");
-		$("#vendredi").slideUp("slow");
-		$("#jeudi").slideDown("slow");
-  });
-$(document).on('click','#bvendredi', function() {
-	counter=0;
-		while(jour!=5){
-			if(jour>5){
-				counter=counter+1;
-				jour=jour-1;
-			}
-			else{
-				counter=counter-1;
-				jour=jour+1;
-			}
-		}
-		numero=numero-counter;		
-		setdate();
-		menu(m);
-		$("#mardi").slideUp("slow");
-		$("#lundi").slideUp("slow");
-		$("#jeudi").slideUp("slow");
-		$("#mercredi").slideUp("slow");
-		$("#vendredi").slideDown("slow");
-  });
-
-
-$(document).on('swipeleft','#blundi', function() {
-	counter=0;
-		while(jour!=1){
-			if(jour>1){
-				counter=counter+1;
-				jour=jour-1;
-			}
-			else{
-				counter=counter-1;
-				jour=jour+1;
-			}
-		}
-		numero=numero-counter;		
-		setdate();
-		menu(m);
-	$("#mardi").slideUp("slow");
-	$("#mercredi").slideUp("slow");
-	$("#jeudi").slideUp("slow");
-	$("#vendredi").slideUp("slow");
-	$("#lundi").slideDown("slow");
-	
-  });
-
-$(document).on('swipeleft','#bmardi', function() {
-	counter=0;
-		while(jour!=2){
-			if(jour>2){
-				counter=counter+1;
-				jour=jour-1;
-			}
-			else{
-				counter=counter-1;
-				jour=jour+1;
-			}
-		}
-		numero=numero-counter;		
-		setdate();
-		menu(m);
-		$("#lundi").slideUp("slow");
-		$("#mercredi").slideUp("slow");
-		$("#jeudi").slideUp("slow");
-		$("#vendredi").slideUp("slow");
-		$("#mardi").slideDown("slow");
-  });
-$(document).on('swipeleft','#bmercredi', function() {
-	
-	counter=0;
-		while(jour!=3){
-			if(jour>3){
-				counter=counter+1;
-				jour=jour-1;
-			}
-			else{
-				counter=counter-1;
-				jour=jour+1;
-			}
 		numero=numero-counter;		
 		setdate();
 		menu(m);
@@ -429,9 +368,15 @@ $(document).on('swipeleft','#bmercredi', function() {
 		$("#lundi").slideUp("slow");
 		$("#jeudi").slideUp("slow");
 		$("#vendredi").slideUp("slow");
+		$('#2date').hide();
+		$('#1date').hide();
+		$('#4date').hide();
+		$('#5date').hide();
+		$('#3date').show();
 		$("#mercredi").slideDown("slow");
   });
-$(document).on('swipeleft','#bjeudi', function() {
+$(document).on('click','#bjeudi', function() {
+	if(jeudi==0){
 	counter=0;
 		while(jour!=4){
 			if(jour>4){
@@ -446,13 +391,21 @@ $(document).on('swipeleft','#bjeudi', function() {
 		numero=numero-counter;		
 		setdate();
 		menu(m);
+	}
 		$("#mardi").slideUp("slow");
 		$("#lundi").slideUp("slow");
 		$("#mercredi").slideUp("slow");
 		$("#vendredi").slideUp("slow");
+
+		$('#4date').show();
+		$('#2date').hide();
+		$('#3date').hide();
+		$('#1date').hide();
+		$('#5date').hide();
 		$("#jeudi").slideDown("slow");
   });
-$(document).on('swipeleft','#bvendredi', function() {
+$(document).on('click','#bvendredi', function() {
+	if(vendredi==0){
 	counter=0;
 		while(jour!=5){
 			if(jour>5){
@@ -467,10 +420,161 @@ $(document).on('swipeleft','#bvendredi', function() {
 		numero=numero-counter;		
 		setdate();
 		menu(m);
+	}
 		$("#mardi").slideUp("slow");
 		$("#lundi").slideUp("slow");
 		$("#jeudi").slideUp("slow");
 		$("#mercredi").slideUp("slow");
+		$('#2date').hide();
+		$('#3date').hide();
+		$('#4date').hide();
+		$('#1date').hide();
+		$('#5date').show();
 		$("#vendredi").slideDown("slow");
+  });
+
+
+$(document).on('swipeleft','#blundi', function() {
+	if(lundi==0){
+	counter=0;
+		while(jour!=1){
+			if(jour>1){
+				counter=counter+1;
+				jour=jour-1;
+			}
+			else{
+				counter=counter-1;
+				jour=jour+1;
+			}
+		}
+		numero=numero-counter;		
+		setdate();
+		menu(m);
+	}
+	$("#mardi").slideUp("slow");
+	$("#mercredi").slideUp("slow");
+	$("#jeudi").slideUp("slow");
+	$("#vendredi").slideUp("slow");
+	$('#2date').hide();
+	$('#3date').hide();
+	$('#4date').hide();
+	$('#5date').hide();
+	$('#1date').show();
+	$("#lundi").slideDown("slow");
+	
+  });
+
+$(document).on('swipeleft','#bmardi', function() {
+	if(mardi==0){
+	counter=0;
+		while(jour!=2){
+			if(jour>2){
+				counter=counter+1;
+				jour=jour-1;
+			}
+			else{
+				counter=counter-1;
+				jour=jour+1;
+			}
+		}
+		numero=numero-counter;		
+		setdate();
+		menu(m);
+	}
+		$("#lundi").slideUp("slow");
+		$("#mercredi").slideUp("slow");
+		$("#jeudi").slideUp("slow");
+		$("#vendredi").slideUp("slow");
+		$('#1date').hide();
+		$('#3date').hide();
+		$('#4date').hide();
+		$('#5date').hide();
+		$('#2date').show();
+		$("#mardi").slideDown("slow");
+  });
+$(document).on('swipeleft','#bmercredi', function() {
+	if(mercredi==0){
+	counter=0;
+		while(jour!=3){
+			if(jour>3){
+				counter=counter+1;
+				jour=jour-1;
+			}
+			else{
+				counter=counter-1;
+				jour=jour+1;
+			}
+		}
+		numero=numero-counter;		
+		setdate();
+		menu(m);
+	}
+		$("#mardi").slideUp("slow");
+		$("#lundi").slideUp("slow");
+		$("#jeudi").slideUp("slow");
+		$("#vendredi").slideUp("slow");
+		$('#2date').hide();
+		$('#1date').hide();
+		$('#4date').hide();
+		$('#5date').hide();
+		$('#3date').show();
+		$("#mercredi").slideDown("slow");
+  });
+$(document).on('swipeleft','#bjeudi', function() {
+	if(jeudi==0){
+	counter=0;
+		while(jour!=4){
+			if(jour>4){
+				counter=counter+1;
+				jour=jour-1;
+			}
+			else{
+				counter=counter-1;
+				jour=jour+1;
+			}
+		}
+		numero=numero-counter;		
+		setdate();
+		menu(m);
+	}
+		$("#mardi").slideUp("slow");
+		$("#lundi").slideUp("slow");
+		$("#mercredi").slideUp("slow");
+		$("#vendredi").slideUp("slow");
+		$('#2date').hide();
+		$('#3date').hide();
+		$('#1date').hide();
+		$('#5date').hide();
+		$('#4date').show();
+		$("#jeudi").slideDown("slow");
+  });
+$(document).on('swipeleft','#bvendredi', function() {
+	if(vendredi==0){
+	counter=0;
+		while(jour!=5){
+			if(jour>5){
+				counter=counter+1;
+				jour=jour-1;
+			}
+			else{
+				counter=counter-1;
+				jour=jour+1;
+			}
+		}
+		numero=numero-counter;		
+		setdate();
+		menu(m);
+	}
+		$("#mardi").slideUp("slow");
+		$("#lundi").slideUp("slow");
+		$("#jeudi").slideUp("slow");
+		$("#mercredi").slideUp("slow");
+		$('#2date').hide();
+		$('#3date').hide();
+		$('#4date').hide();
+		$('#1date').hide();
+		$('#5date').show();
+		$("#vendredi").slideDown("slow");
+		
   });
 

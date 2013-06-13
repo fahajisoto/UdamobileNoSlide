@@ -17,10 +17,14 @@
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=true&amp;libraries=places"> </script>	
 		<script type="text/javascript" src="js/jsMenu.js"></script>
 		<style>
-
+			.clear {
+				/*height: 1px;*/ 
+				width: 99%; 
+				clear: both;
+			}
 			#button_menu {
-				width:10%;
-				float: right; 		
+				float: right;
+				width: 15%;	
 			}
 			#button_menu ul {
 				
@@ -40,7 +44,7 @@
 			}
 			
 			#page_menu {
-				width:40%;
+				width:60%;
 				background-color: #000;
 				float: left;
 				color: #fafafa !important;
@@ -48,20 +52,20 @@
 		
 			#mapholder {
 				padding-bottom:2px;
-				margin-top:1px;
-				margin-right:8%;
+				/*margin-top:1px;*/
+				/*margin-right:8%;*/
 				width:99%;
 				height:40%;
 				overflow:hidden;
-				display:block;
+				/*display:block;*/
 				margin-top: 0em;
 			}
 			#addressText{
 				padding-top:75%;
-				margin-right:8%;
+				/*margin-right:8%;*/
 				width:99%;
 				height:40%;
-				display:block;
+				/*display:block;*/
 				background-color: #000;
 			}
 			.adp-step, .adp-substep{
@@ -74,6 +78,8 @@
 			.ui-li li{
 			border: 2px solid #525252;
 			background-color: red;
+			font-family: Helvetica, Arial, sans-serif;
+			width:50%;
 			}
 			#page_layout{
 				width:100%;
@@ -115,11 +121,11 @@
 			<div class="ui-body-a" id="Rname"></div>
 
 			<div id="page_menu">
-				<div id="lundi" class="ui-li" data-role="listview" data-inset="true" width="100%"></div>
-				<div id="mardi" class="ui-li" data-role="listview" data-inset="true" width="100%"></div>
-				<div id="mercredi" class="ui-li" data-role="listview" data-inset="true" width="100%"></div>
-				<div id="jeudi" class="ui-li" data-role="listview" data-inset="true" width="100%"></div>
-				<div id="vendredi" class="ui-li" data-role="listview" data-inset="true" width="100%"></div>
+				<ul id="lundi" class="ui-li" data-role="listview" data-inset="true" width="100%"></ul>
+				<ul id="mardi" class="ui-li" data-role="listview" data-inset="true" width="100%"></ul>
+				<ul id="mercredi" class="ui-li" data-role="listview" data-inset="true" width="100%"></ul>
+				<ul id="jeudi" class="ui-li" data-role="listview" data-inset="true" width="100%"></ul>
+				<ul id="vendredi" class="ui-li" data-role="listview" data-inset="true" width="100%"></ul>
 			</div>
 			<div id="button_menu">
 				<ul>
@@ -130,7 +136,7 @@
 					<li><a id="bvendredi" data-transition="slide"  data-inset="true" data-ajax="false" ></a></li>							
 				</ul>
 			</div>
-			<div style="height: 10px; width: 100%; clear: both;"></div>
+			<div class="clear"></div>
 			<div class="ui-body-a" id="address"></div>
 			<div id="itineraire">	
 		 		 <div id="mapholder"></div>

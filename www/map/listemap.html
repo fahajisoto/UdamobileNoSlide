@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, minimum-scale=1,  maximum-scale=1"/> 
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<script src="phonegap.js"></script>
+		<link rel="stylesheet" href="../common/css/themes/blanc.min.css" />
+		<link rel="stylesheet" href="../common/css/jquery.mobile.structure-1.3.1.min.css" /> 
+		<script src="../common/js/jquery-1.9.1.min.js"> </script>
+			<script src="../map/js/initialize.js"> </script>
+		<script src="../map/js/getLocation.js"> </script>
+		<script type="text/javascript">
+			$(document).bind('mobileinit', function(){
+				$.mobile.page.prototype.options.addBackBtn = true;
+				$.mobile.allowCrossDomainPages = true;
+				$.mobile.defaultPageTransition = "slide";
+			});
+		</script>
+		<script src="../common/js/jquery.mobile-1.3.0.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=true&amp;libraries=places"> </script>	
+		<script type="text/javascript" src="js/places.js"></script>
+		<style>
+			#mapholder {
+				padding-bottom:2px;
+				margin-top:1px;
+				margin-right:8%;
+				width:99%;
+				height:40%;
+				overflow:hidden;
+				display:block;
+				margin-top: 0em;
+			}
+			#EmplacementItineraireTexte{
+				padding-top:75%;
+				margin-right:8%;
+				width:99%;
+				height:40%;
+				display:block;
+				background-color: #000;
+			}
+			.adp-step, .adp-substep{
+				background-color:#000;
+				text-color: #fafafa;
+			}
+		</style>
+	</head>
+	
+	<body onload="$('#mapholder').css({ opacity: 0, zoom: 0 });$('#newlist').hide();" >
+
+		<div class="mainPage" id="mainPage" data-role="page" data-theme="a">
+			<div id="uda_header" data-role="header" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a id="homepage" data-role="button"  ontouchstart="window.location='../main.html';" data-transition="reverse" data-ajax="false"><img src="../icons/home.png" ></a> </li>
+						<li><a id="backButton" data-role="button"  onclick="window.location='map.html';" data-transition="reverse" data-ajax="false"><img src="../icons/back_button.png" ></a>	</li>
+					</ul>
+					
+				</div>
+			</div><!-- /header -->
+	
+					<div id="header2">	
+					<h3>Liste des batiments universitaire:</h3>
+					</div>
+				<ul id="listbuildings"  data-role="listview">
+					<li><a id="universite"  onclick="listbuildings('universite')" data-transition="slide">universite</a></li>
+					<li><a id="sante"  onclick="listbuildings('sante')" data-transition="slide">sante</a></li>
+					<li><a id="loisir"  onclick="listbuildings('loisir')" data-transition="slide">loisir</a></li>
+					<li><a id="BU"  onclick="listbuildings('BU')" data-transition="slide">BU</a></li>
+					<li><a id="resto" onclick="listbuildings('resto')" data-transition="slide">resto</a></li>
+					<li><a id="heberg"  onclick="listbuildings('heberg')" data-transition="slide">heberg</a></li>
+					<li><a id="divers" onclick="listbuildings('divers')" data-transition="slide">divers</a></li>
+				</ul>
+				<ul id="newlist"  data-role="listview"></ul>
+			
+			<div id="mapholder"></div>
+			<div id="EmplacementItineraireTexte"></div>
+		</div>
+		
+	</body>
+</html>
+		

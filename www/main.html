@@ -1,0 +1,105 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title>UdAMobile</title>
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, minimum-scale=1,  maximum-scale=1"/> 
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<script src="phonegap.js"></script>
+		<script src="barcodescanner.js"></script>
+		<link rel="stylesheet" href="common/css/jquery.mobile.structure-1.3.1.min.css" /> 
+		<link rel="stylesheet" href="common/css/themes/blanc.min.css" />
+
+		<script src="common/js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).bind('mobileinit', function(){
+				$.mobile.page.prototype.options.addBackBtn = true;
+				$.mobile.allowCrossDomainPages = true;
+				$.mobile.defaultPageTransition = "slide";
+			});
+		</script>
+		<script src="common/js/jquery.mobile-1.3.0.js"></script>
+
+	</head> 
+	<body> 
+		<div class="mainPage" id="mainPage" data-role="page" data-theme="a" >
+			<div id="uda_header" data-role="header" data-position="fixed"  >
+				<h4>UdAMobile</h4>
+			</div>
+			<div id="maintable" class="ui-content">	
+				<table id="maintable">
+						<tbody>
+							<tr>
+							   
+								<td  onclick="window.location='emploi/emploi_temps.html';" id="emploi_du_temps" rel="external"  data-transition="slide" >
+											<img src="icons/emploi.png" height="50%" width="auto"/> 
+							
+								</td>	
+								
+								<td ontouchstart="window.location='map/map.html';" data-transition="slide" data-ajax="false" >
+											<img src="icons/map-icon.png" height="50%" width="auto"/> 
+											<!-- <span>Map</span> -->
+								</td>
+								<td  ontouchstart="window.location='restaurant/restaurant.html';" data-transition="slide" data-ajax="false">
+											<img src="icons/resto3.png" height="50%" width="auto"/> 
+											<!-- <span>Restaurants</span> -->
+								</td>
+							</tr>
+							<tr>
+										<td ontouchstart="alert('not decided');" data-transition="slide" data-rel="external" data-ajax="false">
+											<img src="icons/news-icon.png" height="50%" width="auto"/> 
+											<!-- <span>Actualités</span> -->
+										</td>
+										
+
+								
+										<td  ontouchstart="window.location='annuaire/annuaire.html';" data-transition="slide" data-ajax="false" >
+											<img src="icons/annu.png" height="50%" width="auto"/> 
+											<!-- <span>Annuaire</span> -->
+										</td>
+										 
+										<td  ontouchstart="window.location='transport/transport.html';" data-transition="slide" data-ajax="false" >
+											<img src="icons/bus-icon.png" height="50%" width="auto"/> 
+									
+										</td>
+										 <!--
+										 <td>
+										 		 
+										 		<a data-transition="slide"  data-ajax="false" >
+												<img src="icons/branche.jpg" width=200 height=200 /> 
+												<span>transport</span></a>
+												</td>
+												-->
+							</tr>
+						</tbody>
+				</table>
+				
+			
+					
+
+							
+
+	
+			
+					<!--  <a href="tel:+33607439323"data-transition="slide" data-rel="external" data-ajax="false">
+						<img src="icons/tel.png" width=200 height=200 /> 
+						 <span>call Fa</span> 
+					</a>-->
+			</div>
+
+			<div id="page_footer" data-role="footer" data-position="fixed"  >
+				<a id="twitter"  rel="external"  ontouchstart="window.location='http://twitter.com/';" >
+					<img src="icons/twitter-icon.png" height="80%"   />
+				</a>
+				<a id="facebook"  rel="external"  ontouchstart="window.location='http://www.facebook.com/';" >
+					<img src="icons/Facebook-icon.png" height="90%"  />
+				</a>
+				<a id="google" rel="external"  ontouchstart="window.location='https://plus.google.com/';">
+					<img src="icons/google-g.png"  height="90%"  />
+				</a>
+				<a id="youtube" rel="external"  ontouchstart="window.location='http://m.youtube.com/';" >
+					<img src="icons/youtube-icon.png" height="80%" /> 
+				</a>
+			</div>
+		</div>	
+	</body>
+</html>

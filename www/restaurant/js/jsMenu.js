@@ -239,10 +239,12 @@ function makemenu(json){
 
 //btn retour sur la liste des resto qd on est ds le menu
 $(document).on('click','#btnBack', function(){ 
+	window.location.href='#mainPage';
 	jour = today.getDay();
 	numero = today.getDate();
 	html="";
 	$('#addressText').html(html);
+	
 });
 
 $(document).ready(function() {

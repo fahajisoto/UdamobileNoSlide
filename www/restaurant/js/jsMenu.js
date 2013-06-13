@@ -197,18 +197,18 @@ function makemenu(json){
 			{
 				if(MidiSize>0)
 					html +="<li><img src=\"css/jour.jpg\" class=\"icons\"></img></li>"+
-							"<li id=\"EntréesM\"><img src=\"css/entree.png\" class=\"icons\"></img>"+EntréesMidi+"</li>" +
-							"<li id=\"PlatsM\"><img src=\"css/repas.png\" class=\"icons\"></img>"+PlatsMidi+"</li>" +
-							"<li id=\"LégumesM\"><img src=\"css/legume.png\" class=\"icons\"></img>"+ LégumesMidi+"</li>" +
-							"<li id=\"DessertsM\"><img src=\"css/dess.png\" class=\"icons\"></img>"+DessertsMidi+"</li>";
+							"<li id=\"EntréesM\"><img src=\"css/entree.png\" class=\"icons\"></img><p>"+EntréesMidi+"</p></li>" +
+							"<li id=\"PlatsM\"><img src=\"css/repas.png\" class=\"icons\"></img><p>"+PlatsMidi+"</p></li>" +
+							"<li id=\"LégumesM\"><img src=\"css/legume.png\" class=\"icons\"></img><p>"+ LégumesMidi+"</p></li>" +
+							"<li id=\"DessertsM\"><img src=\"css/dess.png\" class=\"icons\"></img><p>"+DessertsMidi+"</p></li>";
 				else 
 					html += "<li><p><span style='text-decoration:underline' >Midi</span> : Pas de service</p></li>";
 				if(SoirSize>0)
 					html+="<li><img src=\"css/soir.png\" class=\"icons\"></img></li>"+
-							"<li id=\"EntréesSoir\"><img src=\"css/entree.png\" class=\"icons\"></img>"+EntréesSoir+"</li>" +
-							"<li id=\"Plats\"><img src=\"css/repas.png\" class=\"icons\"></img>"+PlatsSoir+"</li>" +
-							"<li id=\"Légumes\"><img src=\"css/legume.png\" class=\"icons\"></img>"+ LégumesSoir+"</li>" +
-							"<li id=\"Desserts\"><img src=\"css/dess.png\" class=\"icons\"></img>"+DessertsSoir+"</li>";
+							"<li id=\"EntréesSoir\"><img src=\"css/entree.png\" class=\"icons\"></img><p>"+EntréesSoir+"</p></li>" +
+							"<li id=\"Plats\"><img src=\"css/repas.png\" class=\"icons\"></img><p>"+PlatsSoir+"</p></li>" +
+							"<li id=\"Légumes\"><img src=\"css/legume.png\" class=\"icons\"></img><p>"+ LégumesSoir+"</p></li>" +
+							"<li id=\"Desserts\"><img src=\"css/dess.png\" class=\"icons\"></img><p>"+DessertsSoir+"</p></li>";
 		
 				else 
 					html += "<li><p class=\"soir\"><span style='text-decoration:underline' ><h4>Soir</span> : Pas de service</h4></p></li>";

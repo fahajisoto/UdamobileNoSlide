@@ -36,13 +36,9 @@ function makelist(json){
 						+ " "
 						+ listelement[i].prenom
 						+ "</h3>" 
-						+ "<img src=\"css/mail_green.png\">Courriel:"+"<p>" 
-						+ "<a class=\"udamob_contact_a\" href='mailto:" + listelement[i].mail + "'>" + listelement[i].mail + "</a>"
-						+"</p>";
+						+ "<img src=\"css/mail_green.png\">Courriel:"+"<p><a class=\"udamob_contact_a\" href='mailto:" + listelement[i].mail + "'>" + listelement[i].mail +"</a></p>";
 				if(listelement[i].tel) {
-					html+= "<img src=\"css/phone.png\">TEL:"+"<p>" 
-							+ "<a class=\"udamob_contact_a\" href='tel:" + listelement[i].tel	+"'>" + listelement[i].tel + "</a>" 
-							+ "</p>";
+					html+= "<img src=\"css/phone.png\">TEL:"+"<a class=\"udamob_contact_a\" href='tel:" + listelement[i].tel	+"'>" + listelement[i].tel + "</a>";
 				}
 				html+="</div></div></li>";
 			}

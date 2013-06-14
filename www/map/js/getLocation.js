@@ -16,8 +16,7 @@ var requeteItineraire;
 var directionsService;
 
 
-function initialize() {	
-	
+function initialize() {		
 	$('#Loading').hide();
 	directionsService = new google.maps.DirectionsService();
 	directionsDisplay = new google.maps.DirectionsRenderer();

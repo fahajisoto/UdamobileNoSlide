@@ -13,7 +13,6 @@
 			$(document).bind('mobileinit', function(){
 				$.mobile.allowCrossDomainPages = true;
 				$.mobile.page.prototype.options.domCache = true;
-				$.mobile.defaultPageTransition = "slide";
 			});
 		</script>
 		<script src="common/js/jquery.mobile-1.3.0.js"></script>
@@ -29,60 +28,47 @@
 						<tbody>
 							<tr>
 							   
-								<td><a  href="emploi/emploi_temps.html" id="emploi_du_temps" data-transition="slide" >
-											<img src="icons/emploi.png" height="50%" width="auto"/> </a>
-							
+								<td>
+									<a href="./emploi/emploi_temps.html" data-transition="slide">
+										<img src="icons/emploi.png" height="50%" width="auto"/>
+									</a>
 								</td>	
-								
-								<td><a onclick="window.location='map/map.html';" data-transition="slide" data-rel="external" data-ajax="false">
-											<img src="icons/map-icon.png" height="50%" width="auto"/> </a>
-											<!-- <span>Map</span> -->
+								<td>
+									<a href="./map/map.html" data-ajax="false">
+										<img src="icons/map-icon.png" height="50%" width="auto"/> 
+									</a>
 								</td>
-								<td><a  onclick="window.location='restaurant/restaurant.html';" data-transition="slide"data-ajax="false">
-											<img src="icons/resto3.png" height="50%" width="auto"/> </a>
-											<!-- <span>Restaurants</span> -->
+								<td>
+									<a href="./restaurant/restaurant.html" data-ajax="false">
+										<img src="icons/resto3.png" height="50%" width="auto"/>
+									</a>
 								</td>
 							</tr>
 							<tr>
-										<td ontouchstart="alert('not decided');" data-transition="slide" data-rel="external" >
-											<img src="icons/news-icon.png" height="50%" width="auto"/> 
-											<!-- <span>Actualités</span> -->
+								<td onclick="alert('not decided');" data-transition="slide">
+									<img src="icons/news-icon.png" height="50%" width="auto"/> 
+								</td>
+								<td>
+									<a  href="./annuaire/annuaire.html" data-transition="slide">
+										<img src="icons/annu.png" height="50%" width="auto"/>
+									</a>
+								</td>
+								<td>
+									<a href="./transport/transport.html" data-transition="slide">
+										<img src="icons/bus-icon.png" height="50%" width="auto"/>
+									</a>
+								</td>
+								 <!--
+								 <td>
+								 		 
+								 		<a data-transition="slide"  data-ajax="false" >
+										<img src="icons/branche.jpg" width=200 height=200 /> 
+										<span>transport</span></a>
 										</td>
-										
-
-								
-										<td><a  href="annuaire/annuaire.html" data-transition="slide" >
-											<img src="icons/annu.png" height="50%" width="auto"/> </a>
-											<!-- <span>Annuaire</span> -->
-										</td>
-										 
-										<td><a  href="transport/transport.html" data-transition="slide" >
-											<img src="icons/bus-icon.png" height="50%" width="auto"/> </a>
-									
-										</td>
-										 <!--
-										 <td>
-										 		 
-										 		<a data-transition="slide"  data-ajax="false" >
-												<img src="icons/branche.jpg" width=200 height=200 /> 
-												<span>transport</span></a>
-												</td>
-												-->
+										-->
 							</tr>
 						</tbody>
 				</table>
-				
-			
-					
-
-							
-
-	
-			
-					<!--  <a href="tel:+33607439323"data-transition="slide" data-rel="external" data-ajax="false">
-						<img src="icons/tel.png" width=200 height=200 /> 
-						 <span>call Fa</span> 
-					</a>-->
 			</div>
 
 			<div id="page_footer" data-role="footer" data-position="fixed"  >

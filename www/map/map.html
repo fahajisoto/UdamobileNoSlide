@@ -13,8 +13,6 @@
 			$(document).bind('mobileinit', function(){
 				$.mobile.page.prototype.options.domCache = true;
 				$.mobile.allowCrossDomainPages = true;
-				$.mobile.defaultPageTransition = "slide";
-		
 			});
 		</script>
 		<style>
@@ -36,7 +34,7 @@
 		<div id="uda_header" data-role="header" data-position="fixed">
 			<div data-role="navbar"  >
 				<ul>
-					<li><a  href="../main.html" data-transition="slide" ><img src="../icons/home.png" ></a>  </li>	
+					<li><a  href="../main.html" data-transition="slide"><img src="../icons/home.png" ></a>  </li>	
 					<li><a data-role="button"  href="listemap.html" data-transition="slide" data-shadow="true"><img src="../icons/iconPoi.png" ></a>   </li>
 					<li><a data-role="button" onclick="getLocation()"data-transition="slide"> <img src="../icons/findme.png" /></a>	</li>
 				</ul>

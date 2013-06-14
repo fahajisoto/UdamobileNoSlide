@@ -123,7 +123,8 @@
 
 .ui-btn-down-a {
 	border: 1px solid #bbbbbb;
-	background: #d6d6d6;
+	background-image: url('images/footer.jpg');
+	background-repeat: repeat-x, repeat-y;
 	font-weight: bold;
 	color: #2f3e46;
 	text-shadow: 0 1px 0 #000000;
@@ -144,6 +145,11 @@
 .ui-btn-up-a,.ui-btn-hover-a,.ui-btn-down-a {
 	font-family: Helvetica, Arial, sans-serif;
 	text-decoration: none;
+	background-image: url('images/footer.jpg');
+	background-repeat: repeat-x, repeat-y;
+	background-color: rgba(0, 0, 0, .4);
+	-webkit-border-radius: 9px;
+	border-radius: 9px;
 }
 
 
@@ -202,7 +208,8 @@ a.ui-link-inherit {
 }
 
 .ui-icon,.ui-icon-searchfield:after {
-	background-color: #666666;
+	background-image: url('images/footer.jpg');
+	background-repeat: repeat-x, repeat-y;
 	background-color: rgba(0, 0, 0, .4);
 	background-image: url(images/icons-18-white.png);
 	background-repeat: no-repeat;

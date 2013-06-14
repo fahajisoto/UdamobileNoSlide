@@ -20,7 +20,7 @@ var numero=today.getDate();
 var jour;
 var month;
 var counter=0;
-
+var pic;
 
 function init_itineraire(lat,lan){
 	end = new google.maps.LatLng(lat,lan);
@@ -111,7 +111,7 @@ function makeList(json) {
 				html +="<li class=\"ui-btn ui-btn-up-a ui-btn-icon-right ui-li-has-arrow ui-li ui-first-child\" data-corners=\"false\" data-shadow=\"false\" " +
 						"data-iconshadow=\"true\" onclick=\"setdate();makeaddress('"+escape(jsonResto[i].nom)+"','"+escape(jsonResto[i].adresse)+"','"+jsonResto[i].code_postal+"','"+jsonResto[i].description+"','"+jsonResto[i].latitude+"','"+jsonResto[i].longitude+"');init_itineraire("+jsonResto[i].latitude+","+jsonResto[i].longitude+");menu("+i+",'"+jsonResto[i].date+"')\" " +"data-wrapperels=\"div\" data-icon=\"arrow-r\" data-iconpos=\"right\">" +
 						"<div class=\"ui-btn-inner ui-li\"><div class=\"ui-btn-text\"><a href=\"#menupage\" class=\"ui-link-inherit\" data-transition=\"slide\">"
-						+ jsonResto[i].nom +"("+ jsonResto[i].etat +")"+"</a></div><span class=\"ui-icon ui-icon-arrow-r ui-icon-shadow\"> </span></div></li>";
+						+ "<img src=\"http://udamobile.u-clermont1.fr/v2/restaurant/img/"+jsonResto[i].id+".jpg\">"+ jsonResto[i].nom +"("+ jsonResto[i].etat +")"+"</a></div><span class=\"ui-icon ui-icon-arrow-r ui-icon-shadow\"> </span></div></li>";
 			}
 			
 			$('#listeAlpha').html(html);
@@ -136,7 +136,6 @@ function makeaddress(nom,address,code,desc,lat,lon){
 }
 // init la liste des resto par ordre alpha
 function initMenuAlpha() {
-
 	//recuperation du tableau des resto
 	$.ajax({
 		url:"http://udamobile.u-clermont1.fr/v2/restaurant/",
@@ -173,13 +172,16 @@ function menu(iter) {
 			makemenu(feedback);
 		},
 	});
+	
 }
 
 function makemenu(json){
 	html="";
 	$('#Rname').html("<h3>"+nomResto+"</h3>");
+
 	if(json!="")
 	{
+		
 		var jsonMenu = jQuery.isPlainObject(json) ? json: jQuery.parseJSON(json);
 		var MenuResto = jQuery.isPlainObject(jsonMenu) ? json: jQuery.parseJSON(jsonMenu);	
 		var MidiSize = Object.keys(jsonMenu.midi).length;

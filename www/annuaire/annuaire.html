@@ -4,7 +4,7 @@
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
 		<title>Annuaire - Rechercher une personne</title>
-		<script src="phonegap.js"></script>
+
 
 		<link rel="stylesheet" href="../common/css/themes/blanc.min.css" />
 		<link rel="stylesheet" href="../common/css/jquery.mobile.structure-1.3.1.min.css" /> 
@@ -12,7 +12,6 @@
 		<script type="text/javascript" src="../common/js/jquery.json.js"></script>
 		<script type="text/javascript">
 			$(document).bind('mobileinit', function(){
-				$.mobile.page.prototype.options.addBackBtn = true;
 				$.mobile.page.prototype.options.domCache = true;
 				$.mobile.allowCrossDomainPages = true;
 				$.mobile.defaultPageTransition = "slide";
@@ -27,7 +26,8 @@
 		<div id="uda_header" data-role="header" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a data-role="button" ontouchstart="window.location='../main.html';" data-transition="slide"  data-ajax="false"><img src="../icons/home.png" ></a>  </li>
+					<li><a data-rel="back" data-direction="reverse" ><img src="../icons/home.png" ></a>  </li>
+					<li><a data-rel="back" data-direction="reverse" ><img src="../icons/back_button.png" ></a></li>
 				</ul>
 			</div>
 		</div>	

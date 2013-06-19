@@ -456,14 +456,14 @@ a.ui-link-inherit {
 	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
 	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
 	box-shadow: 0 1px 3px rgba(0, 0, 0, .2)
-}*/
+}
 
 .ui-bar-a .ui-shadow,.ui-bar-b .ui-shadow,.ui-bar-c .ui-shadow {
 	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .3);
 	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .3);
 	box-shadow: 0 1px 0 rgba(255, 255, 255, .3);
 }
-
+*/
 .ui-shadow-inset {
 	-moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, .2);
 	-webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, .2);
@@ -544,17 +544,17 @@ body.loading .Loading {
 #uda_header {
 	background-image: url('images/header.jpg');
 	background-repeat: no-repeat;
-	min-height: 10% !important;
+	height: 10% !important;
 	margin: -1px;
-	text-align: center;
-	text-color: #fafafa;
+
 }
 
 #page_footer {
 	background-image: url('images/footer.png');
 	background-repeat: repeat-x, repeat-y;
-	height: 8% !important;
+	height: 10% !important;
 	margin: none;
+	padding: 0;
 	text-align: center;
 }
 
@@ -569,6 +569,7 @@ body.loading .Loading {
 	padding-left: 1%;
 	padding-up: 0px;
 	padding-down: 0px;
+	height:100%;
 
 }
 
@@ -577,7 +578,7 @@ body.loading .Loading {
 	margins: 0px;
 	padding: 0px;
 	text-align: center;
-	height: 40% !important;
+	height: 100% !important;
 	width: 100% !important;
 }
 
@@ -586,7 +587,7 @@ body.loading .Loading {
 	margin-top: 0 !important;
 	padding: 0 !important;
 	text-align: center;
-	height: 100% !important;
+	height: 78% !important;
 	width: 100% !important;
 	display: flex;
 }
@@ -617,7 +618,7 @@ body.loading .Loading {
 table{
 		width: 100%;
 		text-align: center;
-		text-color: #fff !important;
+		text-color:#67abca !important;
 		border-collapse: collapse;
 		background-image: url('images/background_home.png') !important;
 }
@@ -669,6 +670,8 @@ th {
 	background-image: url('images/footer.png');
 	background-repeat: no-repeat;
 	text-align: center;
+	color:#67abca !important;
+	font-family: Shanti-Regular, sans-serif
 }
 .rssBody li{
 	border-radius: 0.6em 0.6em 0.6em 0.6em;

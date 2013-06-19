@@ -544,7 +544,7 @@ body.loading .Loading {
 #uda_header {
 	background-image: url('images/header.jpg');
 	background-repeat: no-repeat;
-	height: 10% !important;
+	height: 15% !important;
 	margin: -1px;
 
 }
@@ -552,7 +552,7 @@ body.loading .Loading {
 #page_footer {
 	background-image: url('images/footer.png');
 	background-repeat: repeat-x, repeat-y;
-	height: 10% !important;
+	height: 15% !important;
 	margin: none;
 	padding: 0;
 	text-align: center;
@@ -569,7 +569,7 @@ body.loading .Loading {
 	padding-left: 1%;
 	padding-up: 0px;
 	padding-down: 0px;
-	height:100%;
+
 
 }
 
@@ -587,7 +587,7 @@ body.loading .Loading {
 	margin-top: 0 !important;
 	padding: 0 !important;
 	text-align: center;
-	height: 78% !important;
+	height: 69% !important;
 	width: 100% !important;
 	display: flex;
 }

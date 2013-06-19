@@ -674,8 +674,10 @@ th {
 	background-image: url('images/footer.png');
 	background-repeat: no-repeat;
 	text-align: center;
+	text-shadow: none !important;
 	color:#67abca !important;
-	font-family: Shanti
+	font-family: Shanti;
+
 }
 .rssBody li{
 	border-radius: 0.6em 0.6em 0.6em 0.6em;

@@ -570,6 +570,7 @@ body.loading .Loading {
 	padding-left: 1%;
 	padding-up: 0px;
 	padding-down: 0px;
+	height: 100%;
 
 
 }
@@ -579,7 +580,7 @@ body.loading .Loading {
 	margins: 0px;
 	padding: 0px;
 	text-align: center;
-	height: 100% !important;
+	height: 40% !important;
 	width: 100% !important;
 }
 
@@ -588,7 +589,7 @@ body.loading .Loading {
 	margin-top: 0 !important;
 	padding: 0 !important;
 	text-align: center;
-	height: 69% !important;
+	height: 100% !important;
 	width: 100% !important;
 	display: flex;
 }
@@ -619,7 +620,7 @@ body.loading .Loading {
 table{
 		width: 100%;
 		text-align: center;
-		text-color:#67abca !important;
+		color:#67abca !important;
 		border-collapse: collapse;
 		background-image: url('images/background_home.png') !important;
 }

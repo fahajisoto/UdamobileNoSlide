@@ -95,22 +95,24 @@
 				</ul>
 			</div>
 		</div>	
+		<div data-role="content" data-theme="a">
 		<input id="end" type="hidden" value=""/>
 		<div id="header2">	
 			<h3>Liste des restaurants Universitaire:</h3>
 		</div>
-		<div data-role="content" data-theme="a">
+		
 			<div data-role="button"><a id="distance" onclick="distanceFunction();">+proche</a></div>
 			<div data-role="button"><a id="all" href="#all">show all</a></div>
 			<ul id="listeAlpha" data-role="listview"></ul>
 			<small>Source : CROUS Clermont-Ferrand</small>
 
-		</div>
+		
 		<div id="page_footer" data-role="footer" data-position="fixed"  >
 			<a href="../map/map.html" data-ajax="false"><img src="../common/css/icons/140x140_carte.png" /></a>
 			<a href="../actualite/actualite.html" data-ajax="false"><img src="../common/css/icons/140x140_actualites.png"/></a>
 			<a  href="../annuaire/annuaire.html" data-transition="slide"data-ajax="false"><img src="../common/css/icons/140x140_annuaire.png"/></a>	
 		</div>	
+		</div>
 	</div>
 	
 	<div id="menupage" data-role="page" class="mainPage">
@@ -122,6 +124,7 @@
 				</ul>
 			</div>
 		</div>	
+		<div data-role="content" data-theme="a">
 		<div id="page_layout">
 			<div class="ui-body-a" id="pdate"></div>
 			<div class="ui-body-a" id="Rname"></div>
@@ -156,6 +159,7 @@
 				<a href="../actualite/actualite.html" data-ajax="false"><img src="../common/css/icons/140x140_actualites.png"/></a>
 				<a  href="../annuaire/annuaire.html" data-transition="slide"data-ajax="false"><img src="../common/css/icons/140x140_annuaire.png" /></a>	
 		</div>	
+		</div>
 	</div>
 	<div id="all" data-role="page" class="mainPage">
 		<div data-role="header" id="uda_header" data-position="fixed">
@@ -166,6 +170,7 @@
 				</ul>
 			</div>
 		</div>	
+		<div data-role="content" data-theme="a">
 		<div id="page_layout">
 		
 		 	<div id="mapholder2"></div>				
@@ -176,6 +181,6 @@
 				<a  href="../annuaire/annuaire.html" data-transition="slide"data-ajax="false"><img src="../common/css/icons/140x140_annuaire.png" /></a>	
 		</div>
 	</div>		
-	
+	</div>
 </body>
 </html>

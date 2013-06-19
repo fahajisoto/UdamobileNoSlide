@@ -554,7 +554,7 @@ body.loading .Loading {
 	background-repeat: repeat-x, repeat-y;
 	height: 15% !important;
 	width: 100% !important;
-	margin: none;
+	margin: 0;
 	padding: 0;
 	text-align: center;
 }
@@ -577,7 +577,7 @@ body.loading .Loading {
 
 .mainPage {
 	background-image: url('images/background_home.png') !important;
-	margins: 0px;
+	margin: 0px;
 	padding: 0px;
 	text-align: center;
 	height: 40% !important;
@@ -597,6 +597,8 @@ body.loading .Loading {
 #maintable a {
 	text-align: center;
 	position: relative;
+	margin: 0;
+	padding: 0;
 }
 
 .ui-block-a {
@@ -608,7 +610,7 @@ body.loading .Loading {
 .ui-content {
 	text-align: center;
 	padding: 0px;
-	margins: 0px;
+	margin: 0px;
 }
 
 .ui-content a {
@@ -619,6 +621,8 @@ body.loading .Loading {
 
 table{
 		width: 100%;
+		margin: 0;
+		padding: 0;
 		text-align: center;
 		color:#67abca !important;
 		border-collapse: collapse;
@@ -697,6 +701,8 @@ font-weight:bold;
 }
 
 .contents{
-	height:75%;	
-	width: 100%
+	margin: 0;
+	padding: 0;
+	height:90%;	
+	width: 90%;
 }

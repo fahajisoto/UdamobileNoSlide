@@ -145,7 +145,6 @@
 .ui-btn-up-a,.ui-btn-hover-a,.ui-btn-down-a {
 	font-family: Shanti;
 	text-decoration: none;
-	background-image: url('images/footer.jpg');
 	background-repeat: repeat-x, repeat-y;
 	background-color: rgba(0, 0, 0, .4);
 	-webkit-border-radius: 9px;
@@ -545,7 +544,8 @@ body.loading .Loading {
 	background-image: url('images/header.jpg');
 	background-repeat: no-repeat;
 	height: 10% !important;
-	margin: -1px;
+	margin: 0;
+	padding: 0;
 
 }
 
@@ -580,7 +580,7 @@ body.loading .Loading {
 	margins: 0px;
 	padding: 0px;
 	text-align: center;
-	height: 50% !important;
+	height: 40% !important;
 	width: 100% !important;
 }
 
@@ -694,4 +694,8 @@ th {
 font-family: Shanti;
 src: url(Shanti-Regular.ttf);
 font-weight:bold;
+}
+
+.contents{
+	height:65%;	
 }

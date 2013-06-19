@@ -13,7 +13,8 @@
 			});
 		</script>
 		<script src="../common/js/jquery.mobile-1.3.0.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=true&amp;libraries=places"> </script>	
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=true&amp&v=3;libraries=places"> </script>	
+		<script src="http://maps.google.com/maps/api/js?sensor=true&v=3&libraries=geometry"></script>
 		<script type="text/javascript" src="js/jsMenu.js"></script>
 		<style>
 			.clear {
@@ -66,9 +67,7 @@
 				background-color:#000;
 				color: #fafafa;
 			}
-			#page_footer {
-				height: 3% !important;
-			}
+
 			.ui-li li{
 				border: 2px solid #525252;
 				background-color: #fff;
@@ -86,13 +85,13 @@
 		</style>
 
 </head>	
-<body onload="btnhide()">
+<body onload="btnhide();">
 	<div id="mainPage" data-role="page" data-theme="a"class="mainPage">
 		<div data-role="header" id="uda_header" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a  href="../main.html" data-transition="slide" ><img src="../icons/home.png" ></a>  </li>	
-					<li><a data-rel="back" data-direction="reverse" ><img src="../icons/back_button.png" ></a></li>
+					<li><a  href="../main.html" data-transition="slide" ><img src="../common/css/icons/home.png" ></a>  </li>	
+					<li><a data-rel="back" data-direction="reverse" ><img src="../common/css/icons/back_button.png" ></a></li>
 				</ul>
 			</div>
 		</div>	
@@ -100,18 +99,26 @@
 		<div id="header2">	
 			<h3>Liste des restaurants Universitaire:</h3>
 		</div>
-		<div id="page_layout">
-				<ul id="listeAlpha" data-role="listview"></ul>
+		<div data-role="content" data-theme="a">
+			<div data-role="button"><a id="distance" onclick="distanceFunction();">+proche</a></div>
+			<div data-role="button"><a id="all" href="#all">show all</a></div>
+			<ul id="listeAlpha" data-role="listview"></ul>
+			<small>Source : CROUS Clermont-Ferrand</small>
+
 		</div>
-		<small id="page_footer">Source : CROUS Clermont-Ferrand</small>
+		<div id="page_footer" data-role="footer" data-position="fixed"  >
+			<a href="../map/map.html" data-ajax="false"><img src="../common/css/icons/140x140_carte.png" /></a>
+			<a href="../actualite/actualite.html" data-ajax="false"><img src="../common/css/icons/140x140_actualites.png"/></a>
+			<a  href="../annuaire/annuaire.html" data-transition="slide"data-ajax="false"><img src="../common/css/icons/140x140_annuaire.png"/></a>	
+		</div>	
 	</div>
 	
 	<div id="menupage" data-role="page" class="mainPage">
 		<div data-role="header" id="uda_header" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a  href="../main.html" data-transition="slide" ><img src="../icons/home.png" ></a>  </li>	
-					<li><a  href="#mainPage" id="btnBack" data-role="button"  data-transition="reverse" data-ajax="false"><img src="../icons/back_button.png"></a></li>
+					<li><a  href="../main.html" data-transition="slide" ><img src="../common/css/icons/home.png" ></a>  </li>	
+					<li><a  href="#mainPage" id="btnBack" data-role="button"  data-transition="reverse" data-ajax="false"><img src="../common/css/icons/back_button.png"></a></li>
 				</ul>
 			</div>
 		</div>	
@@ -143,7 +150,32 @@
 		 		 <div id="mapholder"></div>
 		  		 <div class="ui-body-a" id="addressText"></div>					
 			</div>
-		</div>		
+		</div>	
+		<div id="page_footer" data-role="footer" data-position="fixed"  >
+				<a href="../map/map.html" data-ajax="false"><img src="../common/css/icons/140x140_carte.png" /></a>
+				<a href="../actualite/actualite.html" data-ajax="false"><img src="../common/css/icons/140x140_actualites.png"/></a>
+				<a  href="../annuaire/annuaire.html" data-transition="slide"data-ajax="false"><img src="../common/css/icons/140x140_annuaire.png" /></a>	
+		</div>	
 	</div>
+	<div id="all" data-role="page" class="mainPage">
+		<div data-role="header" id="uda_header" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a  href="../main.html" data-transition="slide" ><img src="../common/css/icons/home.png" ></a>  </li>	
+					<li><a  href="#mainPage" id="btnBack" data-role="button"  data-transition="reverse" data-ajax="false"><img src="../common/css/icons/back_button.png"></a></li>
+				</ul>
+			</div>
+		</div>	
+		<div id="page_layout">
+		
+		 	<div id="mapholder2"></div>				
+		</div>
+				<div id="page_footer" data-role="footer" data-position="fixed"  >
+				<a href="../map/map.html" data-ajax="false"><img src="../common/css/icons/140x140_carte.png" /></a>
+				<a href="../actualite/actualite.html" data-ajax="false"><img src="../common/css/icons/140x140_actualites.png"/></a>
+				<a  href="../annuaire/annuaire.html" data-transition="slide"data-ajax="false"><img src="../common/css/icons/140x140_annuaire.png" /></a>	
+		</div>
+	</div>		
+	
 </body>
 </html>

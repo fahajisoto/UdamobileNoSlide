@@ -22,23 +22,30 @@
 	</head>
 	<body>
 		<div id="mainPage" data-role="page" class="mainPage">
-		<div id="uda_header" data-role="header" data-position="fixed">
-			<div data-role="navbar">
-				<ul>
-					<li><a data-rel="back" data-direction="reverse" ><img src="../icons/home.png" ></a>  </li>
-					<li><a data-rel="back" data-direction="reverse" ><img src="../icons/back_button.png" ></a></li>
-				</ul>
-			</div>
-		</div>	
-		<div data-role="content" data-theme="a">
-			<h2>Rechercher un contact</h2>
-
-			<b>Nom du contact :</b>
-			<div>
+			<div id="uda_header" data-role="header" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a data-rel="back" data-direction="reverse" ><img src="../common/css/icons/home.png" ></a>  </li>
+						<li><a data-rel="back" data-direction="reverse" ><img src="../common/css/icons/back_button.png" ></a></li>
+					</ul>
+				</div>
+			</div>	
+			<div data-role="content" data-theme="a">
+				<div class="icon"><img src="../common/css/icons/280x280_annuaire.png"/></div>
+				
+				<h2>Rechercher un contact</h2>
+	
+				<b>Nom du contact :</b>
+				<div>
 				<input type="text" name="name" id="name"/>
-				<a data-role="button" id="search" data-transition="slide" onclick="initannuaire()" data-ajax="false"><img src="../icons/2search-icon.png"/></a>
+					<a data-role="button" id="search" data-transition="slide" onclick="initannuaire()" data-ajax="false"><img src="../common/css/icons/2search-icon.png"/></a>
+				</div>
+				<ul id="listAnnu" data-role="listview" data-inset="true"></ul>
 			</div>
-			<ul id="listAnnu" data-role="listview" data-inset="true"></ul>
+			<div id="page_footer" data-role="footer" data-position="fixed"  >
+				<a href="../restaurant/restaurant.html" data-transition="slide"><img src="../common/css/icons/140x140_restauration.png"/></a>
+				<a href="../actualite/actualite.html" data-transition="slide"><img src="../common/css/icons/140x140_actualites.png"/></a>
+				<a  href="../map/map.html" data-transition="slide"><img src="../common/css/icons/140x140_carte.png"/></a>	
 		</div>
 		</div>
 	</body>

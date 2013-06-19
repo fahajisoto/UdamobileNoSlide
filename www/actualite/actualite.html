@@ -1,24 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>actu</title>
+		<title>Actualités UdA</title>
 		<meta name="viewport" content="user-scalable=no, width=device-width, height=device-height, initial-scale=1, minimum-scale=1,  maximum-scale=1"/> 
 		<meta charset="utf-8">
-		<style>
-		html, body {
-			margin: 0 !important;
-			padding: 0 !important;
-			height: 100% !important;
-		}
-		.classHeader{
-			height:10% !important;
-		}
-		
-		</style>
 		<link rel="stylesheet" href="../common/css/themes/blanc.min.css" />
 		<link rel="stylesheet" href="../common/css/jquery.mobile.structure-1.3.1.min.css" /> 
+
+
 		<script src="../common/js/jquery-1.9.1.min.js"> </script>
-				<script src="js/actu.js"> </script>
 		<script type="text/javascript">
 			$(document).bind('mobileinit', function(){
 				$.mobile.allowCrossDomainPages = true;
@@ -26,33 +16,95 @@
 				$.mobile.defaultPageTransition = "slide";
 			});
 		</script>
-		
+		<script type="text/javascript">
+				$(document).ready(function () {
+				  $('#uda').rssfeed('http://www.u-clermont1.fr/feed', {
+				    limit: 5
+				  });
+					$('#t2c').rssfeed('http://www.t2c.fr/flux-rss', {
+					    limit: 5
+					  });
+				});
+		</script>
+		<script src="js/jquery.zrssfeed.min.js" type="text/javascript"></script>
+		<script src="../common/js/jquery.mobile-1.3.0.js"></script>
+			<style>
+			html, body {
+				margin: 0 !important;
+				padding: 0 !important;
+				height: 100% !important;
+				color: #fafafa;
+			}
+			
+			.classHeader{
+				height:10% !important;
+			}
+		</style>
 	</head>
-	<body >
-	<div id="mainPage" data-role="page" onload="recuperation()">
-		<div id="uda_header" data-role="header" data-position="fixed">
-			<div data-role="navbar">
-				<ul>
-					<li><a data-role="button" href="../main.html" data-shadow="true" data-ajax="false"><img src="../icons/home.png" ></a> <h2>actu</h2> </li>
-					<li><a data-role="button" href="../main.html" data-shadow="true" data-ajax="false"><img src="../icons/back_button.png" ></a>	</li>
-				</ul>
+
+	<body>
+		<div data-role="page" id="mainPage" data-theme="">
+			<div id="uda_header" data-role="header" data-position="fixed">
+					<div data-role="navbar">
+						<ul>
+							<li><a data-rel="back" data-direction="reverse" ><img src="../common/css/icons/home.png" ></a>  </li>
+							<li><a data-rel="back" data-direction="reverse" ><img src="../common/css/icons/back_button.png" ></a></li>
+						</ul>
+					</div>
 			</div>
-		</div>	
-		<div >
-			<table>
-				<tr>
-					<td>
-						<input id="searchTextField" type="text" size="49">
-					</td>
-					<td>
-						<a data-role="button" onclick="search_er()" data-shadow="true" >search</a> 
-					</td>
-				</tr>
-			</table>
+			<div data-role="content" data-theme="a">
+					<div class="icon"><img src="../common/css/icons/280x280_actualites.png"/></div>
+				<h2>les actualites</h2>
+				
+					<form>
+						<p>
+							<input id="T2C" type="checkbox" name="newsletter" value="T2C"><span>recevoir aussi les news de t2c</span>
+						</p>
+					</form>
+					<div><a data-role="button" href="#contentpage" data-transition="slide" data-shadow="true" data-ajax="false">Register</a></div>
+					<div id="div"></div>	
+				
+			
+		<div id="page_footer" data-role="footer" data-position="fixed"  >
+				<a href="./restaurant/restaurant.html" data-ajax="false"><img src="../common/css/icons/140x140_restauration.png" height="50%" width="auto"/></a>
+				<a href="./map/map.html" data-ajax="false"><img src="../common/css/icons/140x140_carte.png" height="50%" width="auto"/></a>
+				<a  href="./annuaire/annuaire.html" data-transition="slide"data-ajax="false"><img src="../common/css/icons/140x140_annuaire.png" height="50%" width="auto"/></a>	
 		</div>
-	
-		<div id="divRss"></div>
+		</div>
+		</div>
+		<script>
+			var countChecked = function() {
+
+			};
+			countChecked();
+			$( "input[type=checkbox]" ).on( "click", countChecked );
+		</script>
+		
+		<div data-role="page" id="contentpage" >
+			<div id="uda_header" data-role="header" data-position="fixed">
+					<div data-role="navbar">
+						<ul>
+							<li><a  href="../main.html" data-transition="slide" ><img src="../common/css/icons/home.png" ></a>  </li>	
+							<li><a data-rel="back" data-direction="reverse" ><img src="../common/css/icons/back_button.png" ></a></li>
+						</ul>
+					</div>
+			</div>
+			<div data-role="content" data-theme="a">
+					<div class="icon"><img src="../common/css/icons/280x280_actualites.png"/></div>
+				<h2>Actualités de l'Université d'Auvergne</h2>
+				<div id="uda"></div>
+				<div id="t2c"></div>					
+			
+			<div id="page_footer" data-role="footer" data-position="fixed"  >
+					<a href="./restaurant/restaurant.html" data-ajax="false"><img src="../common/css/icons/140x140_restauration.png" height="50%" width="auto"/></a>
+					<a href="./map/map.html" data-ajax="false"><img src="../common/css/icons/140x140_carte.png" height="50%" width="auto"/></a>
+					<a  href="./annuaire/annuaire.html" data-transition="slide"data-ajax="false"><img src="../common/css/icons/140x140_annuaire.png" height="50%" width="auto"/></a>	
+			</div>
+			</div>
 		</div>
 	</body>
+
 </html>
+
+
 

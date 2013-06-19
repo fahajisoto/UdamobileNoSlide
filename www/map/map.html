@@ -31,33 +31,38 @@
 		
 	</head>
 	<body onLoad="initialize();">
-		<div id="uda_header" data-role="header" data-position="fixed">
-			<div data-role="navbar"  >
-				<ul>
-					<li><a  href="../main.html" data-transition="slide"><img src="../icons/home.png" ></a>  </li>	
-					<li><a data-role="button"  href="listemap.html" data-transition="slide" data-shadow="true" data-ajax="false"><img src="../icons/iconPoi.png" ></a>   </li>
-					<li><a data-role="button" onclick="getLocation()"data-transition="slide"> <img src="../icons/findme.png" /></a>	</li>
-				</ul>
+		<div class="mainPage" id="mainPage" data-role="page" data-theme="a" >
+			<div id="uda_header" data-role="header" data-position="fixed">
+				<div data-role="navbar"  >
+					<ul>
+						<li><a  href="../main.html" data-transition="slide"><img src="../common/css/icons/home.png" ></a>  </li>	
+						<li><a data-role="button"  href="listemap.html" data-transition="slide" data-shadow="true" data-ajax="false"><img src="../common/css/icons/iconPoi.png" ></a>   </li>
+						<li><a data-role="button" onclick="getLocation()"data-transition="slide"> <img src="../common/css/icons/findme.png" /></a>	</li>
+					</ul>
+				</div>
+			</div>	
+				<table>
+					<tr>
+						<td>
+							<input id="searchTextField" type="text" size="49">
+						</td>
+						<td>
+							<a data-role="button" ontouchstart="search_er()"data-transition="slide" ><img src="../common/css/icons/2search-icon.png"/></a> 
+						</td>
+					</tr>
+				</table>
+			
+			 <div id="Loading" > 
+			 	<img src="../icons/loading.gif" height="100%" width="100%"/>
+			 </div> 
+			<div id="mapholder">
 			</div>
-		</div>	
-
-		<div id="mainPage" class="mainPage">
-			<table>
-				<tr>
-					<td>
-						<input id="searchTextField" type="text" size="49">
-					</td>
-					<td>
-						<a data-role="button" ontouchstart="search_er()"data-transition="slide" ><img src="../icons/2search-icon.png"/></a> 
-					</td>
-				</tr>
-			</table>
-		
-		 <div id="Loading" > 
-		 	<img src="../icons/loading.gif" height="100%" width="100%"/>
-		 </div> 
-		<div id="mapholder">
-		</div>
+			
+			<div id="page_footer" data-role="footer" data-position="fixed"  >
+					<a href="../restaurant/restaurant.html" data-ajax="false"><img src="../common/css/icons/140x140_restauration.png" /></a>
+					<a href="../actualite/actualite.html" data-ajax="false"><img src="../common/css/icons/140x140_actualites.png" /></a>
+					<a  href="../annuaire/annuaire.html" data-transition="slide"data-ajax="false"><img src="../common/css/icons/140x140_annuaire.png" /></a>	
+			</div>
 		</div>
 	</body>
 </html>

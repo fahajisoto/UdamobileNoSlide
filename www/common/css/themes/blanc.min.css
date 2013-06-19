@@ -553,6 +553,7 @@ body.loading .Loading {
 	background-image: url('images/footer.png');
 	background-repeat: repeat-x, repeat-y;
 	height: 15% !important;
+	width: 100% !important;
 	margin: none;
 	padding: 0;
 	text-align: center;
